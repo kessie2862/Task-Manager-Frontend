@@ -90,3 +90,14 @@ export const deleteTask = async (taskId, token) => {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
+
+export const toggleTaskCompletion = async (taskId, newStatus, token) => {
+  const response = await api.patch(
+    `/tasks/${taskId}/`,
+    { status: newStatus },
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+  return response.data;
+};
