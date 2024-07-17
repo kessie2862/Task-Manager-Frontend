@@ -63,3 +63,10 @@ export const getTasks = async () => {
   const response = await api.get('/tasks/');
   return response.data;
 };
+
+export const createTask = async (taskData, token) => {
+  const response = await api.post('/tasks/', taskData, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  return response.data;
+};
