@@ -101,3 +101,16 @@ export const toggleTaskCompletion = async (taskId, newStatus, token) => {
   );
   return response.data;
 };
+
+export const getTaskSummary = async (token) => {
+  try {
+    const response = await api.get('/tasks/summary/', {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    return response.data;
+  } catch (error) {
+    throw error.response
+      ? error.response.data
+      : new Error('Failed to fetch task summary');
+  }
+};
