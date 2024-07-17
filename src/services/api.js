@@ -77,3 +77,10 @@ export const getUsers = async (token) => {
   });
   return response.data;
 };
+
+export const updateTask = async (taskId, taskData, token) => {
+  const response = await api.put(`/tasks/${taskId}/`, taskData, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  return response.data;
+};
