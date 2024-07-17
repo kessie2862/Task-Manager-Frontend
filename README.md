@@ -11,11 +11,15 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+- [🔗 Back End Link](#documentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
+  - [Environment Variables](#environment-variables)
+  - [Backend Setup](#backend-setup)
+  - [Running Tests](#running-tests)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -58,9 +62,7 @@
 
 - [Live link](coming soon)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🔗 Back End Link <a name="documentation"></a>
   > _Our [Task-Manager-Backend](https://github.com/kessie2862/Task-Manager-Backend) code is stored in a separate repository and is built using Django REST framework. The backend is responsible for processing data and handling API requests from the front end. To access our backend API, please click [here](https://github.com/kessie2862/Task-Manager-Backend)._
@@ -76,10 +78,10 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
+- Node.js (v14 or higher recommended)
+- npm (v6 or higher recommended)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-##
 
 ### Setup
 
@@ -92,24 +94,27 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Install
-
+Install
 Install this project with:
 
 ```sh
-    cd Task-Manager-Frontend
-    npm install
+cd Task-Manager-Frontend
+npm install
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Usage
-
+Usage
 To run the project, execute the following command:
 
 ```sh
   npm start
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+Backend Setup
+To run the frontend application, ensure that the backend is also set up and running. Follow the instructions provided in the [Task-Manager-Backend repository](https://github.com/kessie2862/Task-Manager-Backend)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,9 +135,8 @@ To run the project, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Add forgot password feature]**
-- [ ] **[ Implement a feature to prioritise tasks.]**
-- [ ] **[ Use a real-time solution (like WebSockets or third-party services) for updates when a task is
-assigned or completed]**
+- [ ] **[Implement a feature to prioritise tasks.]**
+- [ ] **Use a real-time solution (like WebSockets or third-party services) for updates when a task is assigned or completed]**
 - [ ] **[Implement unit tests for critical parts of the application]**
 - [ ] **[Add proper and effective user authorization]**
 
