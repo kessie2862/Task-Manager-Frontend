@@ -84,3 +84,9 @@ export const updateTask = async (taskId, taskData, token) => {
   });
   return response.data;
 };
+
+export const deleteTask = async (taskId, token) => {
+  await api.delete(`/tasks/${taskId}/`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+};
