@@ -53,3 +53,8 @@ export const signup = async (userData) => {
       : new Error('An error occurred during signup');
   }
 };
+
+export const login = async (userData) => {
+  const response = await api.post('/login/', userData);
+  return response.data;
+};
