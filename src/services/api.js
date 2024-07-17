@@ -42,3 +42,14 @@ api.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+
+export const signup = async (userData) => {
+  try {
+    const response = await api.post('/signup/', userData);
+    return response.data;
+  } catch (error) {
+    throw error.response
+      ? error.response.data
+      : new Error('An error occurred during signup');
+  }
+};
