@@ -58,3 +58,8 @@ export const login = async (userData) => {
   const response = await api.post('/login/', userData);
   return response.data;
 };
+
+export const getTasks = async () => {
+  const response = await api.get('/tasks/');
+  return response.data;
+};
