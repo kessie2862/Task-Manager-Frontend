@@ -113,7 +113,8 @@ To run the project, execute the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Backend Setup
+## Backend Setup
+
 To run the frontend application, ensure that the backend is also set up and running. Follow the instructions provided in the [Task-Manager-Backend repository](https://github.com/kessie2862/Task-Manager-Backend)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
