@@ -94,7 +94,8 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Install
+### Install
+
 Install this project with:
 
 ```sh
@@ -104,7 +105,7 @@ npm install
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Usage
+### Usage
 
 To run the project, execute the following command:
 
