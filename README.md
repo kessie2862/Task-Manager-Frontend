@@ -105,6 +105,7 @@ npm install
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 Usage
+
 To run the project, execute the following command:
 
 ```sh
