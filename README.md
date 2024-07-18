@@ -29,7 +29,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Task-Manager-Frontend] <a name="about-project"></a>
+# 📖 Task-Manager-Frontend <a name="about-project"></a>
 
 > **[Task-Manager-Frontend]** is a cutting-edge web application that redefines how users create and manage tasks. Designed with convenience and efficiency in mind. Task Manager seamlessly combines the power of React and Django REST API to offer a comprehensive platform for all your task management needs.
 
