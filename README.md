@@ -64,7 +64,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🔗 Back End Link <a name="documentation"></a>
+## 🔗 Backend Link <a name="documentation"></a>
   > _Our [Task-Manager-Backend](https://github.com/kessie2862/Task-Manager-Backend) code is stored in a separate repository and is built using Django REST framework. The backend is responsible for processing data and handling API requests from the front end. To access our backend API, please click [here](https://github.com/kessie2862/Task-Manager-Backend)._
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
