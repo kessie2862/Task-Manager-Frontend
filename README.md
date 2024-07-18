@@ -78,7 +78,7 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
-- Node.js (v14 or higher recommended)
+- [Node.js](https://nodejs.org/en) (v14 or higher recommended)
 - npm (v6 or higher recommended)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -112,6 +112,7 @@ To run the project, execute the following command:
 ```sh
   npm start
 ```
+- The server will be started on [localhost:3000](http://127.0.0.1:3000/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
