@@ -127,7 +127,7 @@ To run the frontend application, ensure that the backend is also set up and runn
 
 👤 **Prosper Kessie**
 
-- GitHub: [@kessie2862](https://github.com/kessie2862)
+- GitHub: [kessie2862](https://github.com/kessie2862)
 - LinkedIn: [Prosper Kessie](https://www.linkedin.com/in/prosperkessie/)
 
 
