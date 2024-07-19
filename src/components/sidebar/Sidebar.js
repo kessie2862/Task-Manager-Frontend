@@ -80,7 +80,7 @@ const Sidebar = () => {
         } bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
         aria-label="Sidebar"
       >
-        <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800 flex flex-col justify-between">
           <ul className="space-y-2 font-medium">
             <li>
               <Link
@@ -120,6 +120,9 @@ const Sidebar = () => {
                 <span className="ms-3">Tasks</span>
               </Link>
             </li>
+            <hr className="border-t border-gray-200 dark:border-gray-700" />
+          </ul>
+          <ul className="space-y-2 font-medium">
             <li>
               <Link
                 to="/"
