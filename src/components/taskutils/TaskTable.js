@@ -5,6 +5,12 @@ import { useState } from 'react';
 import TaskModal from './TaskModal';
 
 const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
+  const [selectedTaskId, setSelectedTaskId] = useState(null);
+
+  const handleTaskClick = (task) => {
+    setSelectedTaskId(task.id);
+  };
+
   return (
     <div className="overflow-x-auto shadow-md rounded-lg bg-white dark:bg-gray-900">
       <motion.table
