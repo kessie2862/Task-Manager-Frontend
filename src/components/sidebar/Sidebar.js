@@ -33,7 +33,7 @@ const Sidebar = () => {
 
   const handleSetActiveLink = (link) => {
     setActiveLink(link);
-    if (window.innerWidth < 640) {
+    if (window.innerWidth < 1201) {
       setIsSidebarOpen(false);
     }
   };
@@ -49,7 +49,7 @@ const Sidebar = () => {
               <button
                 onClick={toggleSidebar}
                 type="button"
-                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg custom:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">
                   {isSidebarOpen ? 'Close sidebar' : 'Open sidebar'}
@@ -60,7 +60,6 @@ const Sidebar = () => {
                   <MdOutlineMenu className="w-6 h-6" />
                 )}
               </button>
-
               {/* Logo */}
               <Link to="/dashboard" className="flex ms-2 md:me-24">
                 <span className="task-manager self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
@@ -77,7 +76,7 @@ const Sidebar = () => {
         id="logo-sidebar"
         className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform ${
           isSidebarOpen ? '' : '-translate-x-full'
-        } bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
+        } bg-white border-r border-gray-200 custom:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
         aria-label="Sidebar"
       >
         <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800 flex flex-col justify-between">
