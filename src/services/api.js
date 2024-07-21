@@ -114,3 +114,8 @@ export const getTaskSummary = async (token) => {
       : new Error('Failed to fetch task summary');
   }
 };
+
+export const getTaskDetail = async (taskId) => {
+  const response = await api.get(`/tasks/${taskId}/`);
+  return response.data;
+};
