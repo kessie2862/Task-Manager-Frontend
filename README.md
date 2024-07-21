@@ -139,7 +139,6 @@ To run the frontend application, ensure that the backend is also set up and runn
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Add forgot password feature]**
-- [ ] **[Implement a feature to prioritise tasks.]**
 - [ ] **Use a real-time solution (like WebSockets or third-party services) for updates when a task is assigned or completed]**
 - [ ] **[Implement unit tests for critical parts of the application]**
 - [ ] **[Add proper and effective user authorization]**
