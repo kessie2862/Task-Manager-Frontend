@@ -1,8 +1,20 @@
 import { motion } from 'framer-motion';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import TaskModal from './TaskModal';
 
 const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
+  const [selectedTaskId, setSelectedTaskId] = useState(null);
+
+  const handleTaskClick = (task) => {
+    setSelectedTaskId(task.id);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedTaskId(null);
+  };
+
   return (
     <div className="overflow-x-auto shadow-md rounded-lg bg-white dark:bg-gray-900">
       <motion.table
@@ -26,6 +38,9 @@ const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
               Status
             </th>
             <th scope="col" className="px-6 py-3">
+              Priority
+            </th>
+            <th scope="col" className="px-6 py-3">
               Assigned To
             </th>
             <th scope="col" className="px-6 py-3">
@@ -40,7 +55,8 @@ const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+              className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 cursor-pointer"
+              onClick={() => handleTaskClick(task)}
             >
               <td className="px-6 py-4 whitespace-nowrap">{task.title}</td>
               <td className="px-6 py-4 whitespace-nowrap">
@@ -50,6 +66,7 @@ const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
                 {moment(task.due_date).format('Do MMMM YYYY')}
               </td>
               <td className="px-6 py-4 whitespace-nowrap">{task.status}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{task.priority}</td>
               <td className="px-6 py-4 whitespace-nowrap">
                 {task.assigned_user.username}
               </td>
@@ -64,7 +81,10 @@ const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
                 <button
                   className="me-2"
                   title="Delete Task"
-                  onClick={() => handleDelete(task.id)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleDelete(task.id);
+                  }}
                 >
                   <i className="fas fa-trash-alt" style={{ color: 'red' }}></i>
                 </button>
@@ -74,7 +94,10 @@ const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
                       ? 'Undo Complete'
                       : 'Complete Task'
                   }
-                  onClick={() => handleToggleComplete(task)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleToggleComplete(task);
+                  }}
                 >
                   <i
                     className={`fas ${
@@ -87,6 +110,10 @@ const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
           ))}
         </tbody>
       </motion.table>
+
+      {selectedTaskId && (
+        <TaskModal taskId={selectedTaskId} onClose={handleCloseModal} />
+      )}
     </div>
   );
 };

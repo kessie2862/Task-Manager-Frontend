@@ -6,7 +6,11 @@ module.exports = withMT({
   mode: 'jit',
   content: ['./src/**/*.{js,jsx,ts,tsx}', './node_modules/flowbite/**/*.js'],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        custom: '1201px',
+      },
+    },
   },
   plugins: [
     require('flowbite/plugin')({

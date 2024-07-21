@@ -18,6 +18,9 @@ const TaskForm = ({ token }) => {
   const [status, setStatus] = useState(
     currentTask ? currentTask.status : 'open'
   );
+  const [priority, setPriority] = useState(
+    currentTask ? currentTask.priority : 'low'
+  );
   const [assignedUser, setAssignedUser] = useState(
     currentTask ? currentTask.assigned_user.id : ''
   );
@@ -78,6 +81,7 @@ const TaskForm = ({ token }) => {
       description,
       due_date: dueDate,
       status,
+      priority,
       assigned_user_id: assignedUser,
     };
 
@@ -205,6 +209,24 @@ const TaskForm = ({ token }) => {
               <option value="open">Open</option>
               <option value="in_progress">In Progress</option>
               <option value="completed">Completed</option>
+            </select>
+          </div>
+          <div className="col-span-2 sm:col-span-1">
+            <label
+              htmlFor="priority"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Priority:
+            </label>
+            <select
+              id="priority"
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              value={priority}
+              onChange={(e) => setPriority(e.target.value)}
+            >
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
             </select>
           </div>
           <div className="col-span-2 sm:col-span-1">
