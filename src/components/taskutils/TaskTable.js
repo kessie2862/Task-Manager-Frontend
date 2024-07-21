@@ -11,6 +11,10 @@ const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
     setSelectedTaskId(task.id);
   };
 
+  const handleCloseModal = () => {
+    setSelectedTaskId(null);
+  };
+
   return (
     <div className="overflow-x-auto shadow-md rounded-lg bg-white dark:bg-gray-900">
       <motion.table
