@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import TaskModal from './TaskModal';
 
 const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
   return (
@@ -44,6 +46,7 @@ const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 cursor-pointer"
+              onClick={() => handleTaskClick(task)}
             >
               <td className="px-6 py-4 whitespace-nowrap">{task.title}</td>
               <td className="px-6 py-4 whitespace-nowrap">
@@ -53,6 +56,7 @@ const TaskTable = ({ tasks, handleDelete, handleToggleComplete }) => {
                 {moment(task.due_date).format('Do MMMM YYYY')}
               </td>
               <td className="px-6 py-4 whitespace-nowrap">{task.status}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{task.priority}</td>
               <td className="px-6 py-4 whitespace-nowrap">
                 {task.assigned_user.username}
               </td>
