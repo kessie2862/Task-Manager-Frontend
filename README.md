@@ -77,7 +77,9 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+To run this project you need:
+
+- A basic understanding of Git and a code editor(VS Code recommended).
 - [Node.js](https://nodejs.org/en) (v14 or higher recommended)
 - npm (v6 or higher recommended)
 
